@@ -11,30 +11,33 @@ using Olmp.Forms;
 
 namespace Olmp.Forms
 {
-    public partial class viewApp : Form
+    public partial class stats : Form
     {
-        public viewApp()
+        public stats()
         {
             InitializeComponent();
         }
+
         public static string email;
+        private void stats_Load(object sender, EventArgs e)
+        {
+            DB dB = new DB();
+            dB.statsApp(email, chrt);
+        }
+
         private void btn_main_Click(object sender, EventArgs e)
         {
             Main main = new Main();
-            Main.email = email;
             Main.SignIN = true;
+            Main.email = email;
             main.Show();
             this.Close();
-        }
-        private void viewApp_Load(object sender, EventArgs e)
-        {
-            DB dB = new DB();
-            dB.appList(email, gridListApp);
         }
 
         private void btn_acc_Click(object sender, EventArgs e)
         {
             Account account = new Account();
+            Account.email = email;
             account.Show();
             this.Close();
         }
@@ -42,8 +45,8 @@ namespace Olmp.Forms
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Main main = new Main();
-            Main.email = string.Empty;
             Main.SignIN = false;
+            Main.email = string.Empty;
             main.Show();
             this.Close();
         }

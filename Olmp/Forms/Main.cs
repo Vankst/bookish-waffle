@@ -27,12 +27,11 @@ namespace Olmp
                 lbl_amount.Visible = true;
                // DB dB = new DB();
                 //dB.amountApp(email, out int amount);
-                lbl_amount.Text = "Количество приложений " + 2;
+                lbl_amount.Text = "Количество приложений " + 0;
                 btn_signin.Visible = false;
                 btn_signup.Visible = false;
                 btn_PersonalArea.Visible = true;
                 btn_exit.Visible = true;
-
             }
             else
                 lbl_amount.Visible = false;

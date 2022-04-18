@@ -60,9 +60,30 @@ namespace Olmp.Forms
                     ucode += ch4r[r];
                 }
                 DB dB = new DB();
+                dB.CheckUCode(ucode, out bool check);
+                while (check)
+                {
+                    for (int i = 0; i < 32; i++)
+                    {
+                        r = rnd.Next(ch4r.Length);
+                        ucode += ch4r[r];
+                    }
+                    dB.CheckUCode(ucode, out bool check2);
+                    check = check2;
+                }
                 dB.addApp(tb_name.Text, ucode, email);
-                
+
+
             }
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            Main.email = string.Empty;
+            Main.SignIN = false;
+            main.Show();
+            this.Close();
         }
     }
 }

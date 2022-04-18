@@ -30,15 +30,15 @@ namespace Olmp.Forms
         private void InitializeComponent()
         {
             this.panellLogo = new System.Windows.Forms.Panel();
+            this.gridListApp = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_acc = new System.Windows.Forms.Button();
             this.btn_main = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.gridListApp = new System.Windows.Forms.DataGridView();
             this.panellLogo.SuspendLayout();
-            this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridListApp)).BeginInit();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panellLogo
@@ -50,6 +50,14 @@ namespace Olmp.Forms
             this.panellLogo.Name = "panellLogo";
             this.panellLogo.Size = new System.Drawing.Size(386, 292);
             this.panellLogo.TabIndex = 11;
+            // 
+            // gridListApp
+            // 
+            this.gridListApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridListApp.Location = new System.Drawing.Point(5, 52);
+            this.gridListApp.Name = "gridListApp";
+            this.gridListApp.Size = new System.Drawing.Size(369, 237);
+            this.gridListApp.TabIndex = 0;
             // 
             // panelMenu
             // 
@@ -81,6 +89,7 @@ namespace Olmp.Forms
             this.btn_exit.Text = "Выйти";
             this.btn_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_acc
             // 
@@ -98,6 +107,7 @@ namespace Olmp.Forms
             this.btn_acc.Text = "Аккаунт";
             this.btn_acc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_acc.UseVisualStyleBackColor = true;
+            this.btn_acc.Click += new System.EventHandler(this.btn_acc_Click);
             // 
             // btn_main
             // 
@@ -127,14 +137,6 @@ namespace Olmp.Forms
             this.panelLogo.Size = new System.Drawing.Size(147, 52);
             this.panelLogo.TabIndex = 1;
             // 
-            // gridListApp
-            // 
-            this.gridListApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridListApp.Location = new System.Drawing.Point(5, 52);
-            this.gridListApp.Name = "gridListApp";
-            this.gridListApp.Size = new System.Drawing.Size(369, 237);
-            this.gridListApp.TabIndex = 0;
-            // 
             // viewApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,11 +145,12 @@ namespace Olmp.Forms
             this.Controls.Add(this.panellLogo);
             this.Controls.Add(this.panelMenu);
             this.Name = "viewApp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Список приложений";
             this.Load += new System.EventHandler(this.viewApp_Load);
             this.panellLogo.ResumeLayout(false);
-            this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridListApp)).EndInit();
+            this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

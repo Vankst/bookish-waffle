@@ -67,6 +67,7 @@ namespace Olmp
         {
             Main main = new Main();
             Main.SignIN = false;
+            Main.email = string.Empty;
             main.Show();
             this.Close();
         }
@@ -76,6 +77,14 @@ namespace Olmp
             addApp addApp = new addApp();
             addApp.email = email;
             addApp.Show();           
+            this.Close();
+        }
+
+        private void btn_stat_Click(object sender, EventArgs e)
+        {
+            stats stats = new stats();
+            stats.email = email;
+            stats.Show();
             this.Close();
         }
     }

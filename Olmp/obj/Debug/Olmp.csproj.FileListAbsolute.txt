@@ -189,3 +189,4 @@ G:\ОАП\Новая папка (2)\Olmp\obj\Debug\Olmp.csproj.CopyComplete
 G:\ОАП\Новая папка (2)\Olmp\obj\Debug\Olmp.exe
 G:\ОАП\Новая папка (2)\Olmp\obj\Debug\Olmp.pdb
 G:\ОАП\Новая папка (2)\Olmp\obj\Debug\Olmp.Forms.addApp.resources
+G:\ОАП\Новая папка (2)\Olmp\obj\Debug\Olmp.Forms.viewApp.resources
